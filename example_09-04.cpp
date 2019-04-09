@@ -3,6 +3,9 @@
 //connected to the sliders in Figure 9-6
 // Note: This example needs OpenGL installed on your system. It doesn't build if 
 //       the OpenGL libraries cannot be found.
+#ifdef WIN32
+#include <Windows.h>
+#endif
 #include <GL/gl.h>
 #include <GL/glu.h>
 
@@ -82,7 +85,7 @@ int main(int argc, char* argv[])
         return -1;
     }
 
-    cv::namedWindow( "Example 9-4", CV_WINDOW_OPENGL );
+    cv::namedWindow( "Example 9-4", cv::WindowFlags::WINDOW_OPENGL );
     cv::resizeWindow("Example 9-4", img.cols, img.rows);
     cv::createTrackbar( "X-rotation", "Example 9-4", &rotx, 360, on_trackbar);
     cv::createTrackbar( "Y-rotation", "Example 9-4", &roty, 360, on_trackbar);
