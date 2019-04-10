@@ -3,11 +3,16 @@
 //connected to the sliders in Figure 9-6
 // Note: This example needs OpenGL installed on your system. It doesn't build if 
 //       the OpenGL libraries cannot be found.
-#ifdef WIN32
+#ifdef _WIN32
 #include <Windows.h>
 #endif
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#else
 #include <GL/gl.h>
 #include <GL/glu.h>
+#endif
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/opengl.hpp>
