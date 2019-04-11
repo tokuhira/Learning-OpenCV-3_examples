@@ -2,7 +2,7 @@
 // the requested number of views, and calibrating the camera 
 
 // You need these includes for the function
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>  // for windows systems
 #else
 #include <dirent.h>     // for linux systems
@@ -20,7 +20,7 @@ using std::endl;
 
 // Returns a list of files in a directory (except the ones that begin with a dot)
 int readFilenames(vector<string>& filenames, const string& directory) {
-#ifdef WIN32
+#ifdef _WIN32
     HANDLE dir;
     WIN32_FIND_DATA file_data;
 
