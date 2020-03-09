@@ -5,6 +5,7 @@
 #include <string>
 
 #include "opencv2/opencv.hpp"
+#include "opencv2/shape.hpp"
 
 using namespace std;
 using namespace cv;
@@ -38,7 +39,7 @@ void help(char** argv) {
        << "\nNOTE: See images to try in ../shape_sample/\n"
        << "\nCall:\n" << argv[0] << " <path/image_1> <path/image2>\n"
        << "\nMISSMATCH Example:\n" << argv[0] << "  ../shape_sample/1.png ../shape_sample/3.png\n"
-       << "\MATCH Example:\n" << argv[0] << "  ../shape_sample/3.png ../shape_sample/4.png\n"       
+       << "\nMATCH Example:\n" << argv[0] << "  ../shape_sample/3.png ../shape_sample/4.png\n"       
        << endl;
 }
 
@@ -46,7 +47,7 @@ void help(char** argv) {
 int main(int argc, char** argv) {
 	help(argv);
   if(argc != 3) {
-    cout << "\nERROR: you need 2 parameters, you had " << argc << " parameters.\n" << endl;
+    cout << "\nERROR: you need 2 parameters, you had " << argc - 1 << " parameters.\n" << endl;
 	return -1;
   }
   string path = "../data/shape_sample/";
