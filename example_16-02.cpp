@@ -40,6 +40,7 @@ using cv::DMatch;
 using cv::BFMatcher;
 using cv::DrawMatchesFlags;
 using cv::Feature2D;
+using cv::SIFT; // it was cv::xfeatures2d::SIFT
 using cv::ORB;
 using cv::BRISK;
 using cv::AKAZE;
@@ -47,7 +48,6 @@ using cv::KAZE;
 
 using cv::xfeatures2d::BriefDescriptorExtractor;
 using cv::xfeatures2d::SURF;
-using cv::xfeatures2d::SIFT;
 using cv::xfeatures2d::DAISY;
 using cv::xfeatures2d::FREAK;
 
